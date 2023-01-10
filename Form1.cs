@@ -32,7 +32,7 @@ namespace salaryCounter
 
             if (int.Parse(textBox1.Text) > int.Parse(textBox3.Text))
             {
-                int actual = int.Parse(textBox3.Text) + 24;
+                double actual = double.Parse(textBox3.Text) + 24;
                 textBox3.Text = actual.ToString();
             }
 
@@ -40,7 +40,7 @@ namespace salaryCounter
             {
                 int minutes = (int.Parse(textBox1.Text) * 60) + int.Parse(textBox2.Text);
                 int dayTime = (18 * 60) - minutes;
-                int dayTimeSalary = dayTime * defMoneyMinutes;
+                double dayTimeSalary = dayTime * defMoneyMinutes;
                 if (checkBox1.Checked)
                 {
                     dayTimeSalary *= 2;
@@ -66,7 +66,7 @@ namespace salaryCounter
             if (int.Parse(textBox1.Text) < 18 && int.Parse(textBox3.Text) < 18)
             {
                 int minutes = ((int.Parse(textBox3.Text) * 60) + int.Parse(textBox4.Text)) - ((int.Parse(textBox1.Text) * 60) + int.Parse(textBox2.Text));
-                int dayTimeSalary = minutes * defMoneyMinutes;
+                double dayTimeSalary = minutes * defMoneyMinutes;
                 if (int.Parse(textBox3.Text) - int.Parse(textBox1.Text) > 7)
                 {
                     dayTimeSalary -= defMoneyMinutes * 30;
@@ -113,13 +113,13 @@ namespace salaryCounter
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<int> money = new List<int>();
-            int salary = 0;
+            List<double> money = new List<double>();
+            double salary = 0;
             for (int i = 0; i < listBox1.Items.Count; i++)
             {
                 string item = listBox1.Items[i].ToString();
                 string[] split = item.Split(' ');
-                int moneyValue = int.Parse(split[0]);
+                double moneyValue = double.Parse(split[0]);
                 salary += moneyValue;
             }
 
@@ -127,7 +127,7 @@ namespace salaryCounter
             {
                 string item = listBox2.Items[i].ToString();
                 string[] split = item.Split(' ');
-                int moneyValue = int.Parse(split[0]);
+                double moneyValue = double.Parse(split[0]);
                 salary += moneyValue;
             }
 
