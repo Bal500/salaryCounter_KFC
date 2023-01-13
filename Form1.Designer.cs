@@ -203,7 +203,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "1200 Ft",
+            "1350 Ft",
             "1400 Ft",
             "1500 Ft",
             "1600 Ft",
